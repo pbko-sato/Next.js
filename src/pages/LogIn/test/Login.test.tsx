@@ -23,13 +23,18 @@ describe("LogInPage", () => {
   });
   describe("初期表示について", () => {
     describe("部品がすべて表示され、内容が正しいこと", () => {
+      test("ページタイトル", () => {
+        expect(screen.getByTestId("login-title")).toHaveTextContent(
+          "Reactログインページ"
+        );
+      });
       test("ユーザ名のテキストボックス", () => {
-        expect(screen.getAllByRole("textbox")[0]).toBeInTheDocument();
+        expect(screen.getByTestId("input-for-username")).toBeInTheDocument();
         expect(screen.getByPlaceholderText("ユーザ名")).toBeInTheDocument();
         expect(screen.getByPlaceholderText("ユーザ名")).toHaveValue("");
       });
       test("パスワードのテキストボックス", () => {
-        expect(screen.getAllByRole("textbox")[1]).toBeInTheDocument();
+        expect(screen.getByTestId("input-for-password")).toBeInTheDocument();
         expect(screen.getByPlaceholderText("パスワード")).toBeInTheDocument();
         expect(screen.getByPlaceholderText("パスワード")).toHaveValue("");
       });

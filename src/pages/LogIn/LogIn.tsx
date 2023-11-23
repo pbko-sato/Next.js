@@ -43,6 +43,7 @@ const LogInPage = () => {
 
   return (
     <>
+      <h1 data-testid="login-title">Reactログインページ</h1>
       <input
         placeholder="ユーザ名"
         value={username}
@@ -55,6 +56,7 @@ const LogInPage = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         data-testid="input-for-password"
+        type="password"
       />
       <br />
       <button onClick={clearValues} data-testid="clear-button">
