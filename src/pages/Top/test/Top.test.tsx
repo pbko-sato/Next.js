@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import TopPage from "../Top";
-
 import "@testing-library/jest-dom";
 
 jest.mock("next/navigation", () => ({
