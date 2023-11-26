@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useUpdateEffect } from "react-use";
 import { useRouter } from "next/navigation";
 import Head from "next/head";
+import TextBoxUtil from "../../utilComponents/TextBoxUtil";
+import ButtonUtil from "@/utilComponents/ButtonUtil";
 
 const LogInPage = () => {
   const [username, setUsername] = useState("");
@@ -56,31 +58,36 @@ const LogInPage = () => {
         <title>ログイン</title>
       </Head>
       <h1 data-testid="login-title">Reactログインページ</h1>
-      <input
+      <TextBoxUtil
         placeholder="ユーザ名"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-        data-testid="login-input-for-username"
+        testId="login-input-for-username"
+        type="text"
       />
       <br />
-      <input
+      <TextBoxUtil
         placeholder="パスワード"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        data-testid="login-input-for-password"
+        testId="login-input-for-password"
         type="password"
       />
       <br />
-      <button onClick={clearValues} data-testid="login-clear-button">
-        やり直す
-      </button>
-      <button
+      <ButtonUtil
+        content="やり直す"
+        onClick={clearValues}
+        disabled={false}
+        className=""
+        testId="login-clear-button"
+      />
+      <ButtonUtil
+        content="ログイン"
         onClick={onClickLogInButton}
         disabled={isDisabled}
-        data-testid="login-login-button"
-      >
-        ログイン
-      </button>
+        className=""
+        testId="login-login-button"
+      />
       <h1 data-testid="login-result-text">{resultText}</h1>
     </>
   );
