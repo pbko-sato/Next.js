@@ -1,4 +1,5 @@
 import { ChangeEvent, useState } from "react";
+import "../styles/utilComponents/TextBoxUtil.css";
 
 type TextBoxUtilProps = {
   placeholder: string;
@@ -11,6 +12,7 @@ type TextBoxUtilProps = {
 const TextBoxUtil = (props: TextBoxUtilProps) => {
   return (
     <input
+      className="input-text-box"
       placeholder={props.placeholder}
       value={props.value}
       onChange={props.onChange}

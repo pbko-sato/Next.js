@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import Head from "next/head";
 import TextBoxUtil from "../../utilComponents/TextBoxUtil";
 import ButtonUtil from "@/utilComponents/ButtonUtil";
+import "../../styles/main.css";
+import "../../styles/utilComponents/ButtonUtil.css";
 
 const LogInPage = () => {
   const [username, setUsername] = useState("");
@@ -53,7 +55,7 @@ const LogInPage = () => {
   }, [username, password]);
 
   return (
-    <>
+    <div className="main">
       <Head>
         <title>ログイン</title>
       </Head>
@@ -78,18 +80,18 @@ const LogInPage = () => {
         content="やり直す"
         onClick={clearValues}
         disabled={false}
-        className=""
+        className="button login-clear-button"
         testId="login-clear-button"
       />
       <ButtonUtil
         content="ログイン"
         onClick={onClickLogInButton}
         disabled={isDisabled}
-        className=""
+        className="button login-login-button"
         testId="login-login-button"
       />
       <h1 data-testid="login-result-text">{resultText}</h1>
-    </>
+    </div>
   );
 };
 
