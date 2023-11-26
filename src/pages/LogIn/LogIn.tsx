@@ -43,6 +43,7 @@ const LogInPage = () => {
 
   return (
     <>
+      <h2 data-testid="login-title">ログインページ</h2>
       <input
         placeholder="ユーザ名"
         value={username}
