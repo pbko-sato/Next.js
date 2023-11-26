@@ -25,7 +25,7 @@ describe("LogInPage", () => {
     describe("部品がすべて表示され、内容が正しいこと", () => {
       test("ユーザ名のテキストボックス", () => {
         expect(screen.getByTestId("login-title")).toHaveTextContent(
-          "ログインページ"
+          "Reactログインページ"
         );
         expect(screen.getAllByRole("textbox")[0]).toBeInTheDocument();
         expect(screen.getByPlaceholderText("ユーザ名")).toBeInTheDocument();

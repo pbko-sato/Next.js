@@ -43,7 +43,7 @@ const LogInPage = () => {
 
   return (
     <>
-      <h2 data-testid="login-title">ログインページ</h2>
+      <h1 data-testid="login-title">Reactログインページ</h1>
       <input
         placeholder="ユーザ名"
         value={username}
