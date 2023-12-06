@@ -6,6 +6,7 @@ type TextBoxUtilProps = {
   value: string;
   testId: string;
   type: string;
+  id: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
@@ -17,6 +18,7 @@ const TextBoxUtil = (props: TextBoxUtilProps) => {
       value={props.value}
       onChange={props.onChange}
       data-testid={props.testId}
+      id={props.id}
       type={props.type}
     />
   );
