@@ -1,0 +1,29 @@
+.button {
+  border: 1px solid gray;
+  border-radius: 100px;
+  padding: 8px 10px;
+  font-weight: bold;
+  color: #222222;
+  background: linear-gradient(#f5f5f5, #f5fffa);
+}
+.button:hover {
+  border: 1px solid gray;
+  border-radius: 100px;
+  padding: 8px 10px;
+  font-weight: bold;
+  color: #222222;
+  background: linear-gradient(#f5f5f5, #e6ffe9);
+}
+.login-login-button {
+  background: linear-gradient(#3cb371, #2e8b57);
+  color: white;
+}
+.login-login-button:hover {
+  background: linear-gradient(#228b22, #006400);
+  color: white;
+}
+.login-login-button:disabled {
+  background: linear-gradient(#cbffd3, #aeffbd);
+  background-color: #f0fff0;
+  color: #666666;
+}

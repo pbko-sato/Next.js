@@ -4,9 +4,9 @@ import LogInPage from "./LogIn/LogIn";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div className="main">
       <LogInPage />
-    </>
+    </div>
   );
 };
 
