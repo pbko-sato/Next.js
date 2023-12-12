@@ -8,7 +8,9 @@ import Link from "next/link";
 
 export const TopPage = () => {
   const router = useRouter();
-  const onClickLogInAgainButton = () => {};
+  const onClickLogInAgainButton = () => {
+    router.push(PagePaths.LOGIN_PAGE.url, PagePaths.LOGIN_PAGE.as);
+  };
 
   return (
     <div className="main">
