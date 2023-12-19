@@ -1,10 +1,12 @@
-.main {
-  background-color: ghostwhite;
-  min-height: 100vh;
-  min-width: 100vh;
-  text-align: center;
-}
+@media screen {
+  .main {
+    background-color: ghostwhite;
+    min-height: 1em;
+    min-width: 1em;
+    text-align: center;
+  }
 
-h1 {
-  font-family: "";
+  h1 {
+    font-family: "";
+  }
 }
