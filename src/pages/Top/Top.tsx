@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useRouter } from "next/navigation";
 import ButtonUtil from "@/utils/ButtonUtil";
 import "../../styles/main.css";
 import "../../styles/utilComponents/ButtonUtil.css";
@@ -7,10 +6,7 @@ import PagePaths from "@/utils/PagePaths";
 import Link from "next/link";
 
 export const TopPage = () => {
-  const router = useRouter();
-  const onClickLogInAgainButton = () => {
-    router.push(PagePaths.LOGIN_PAGE.url, PagePaths.LOGIN_PAGE.as);
-  };
+  const onClickLogInAgainButton = () => {};
 
   return (
     <div className="main">
